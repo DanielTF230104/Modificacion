@@ -22,24 +22,24 @@
         </div>
         <div class="col-12 col-lg-8 col-xxl-6">
             <form action="" method="post" onsubmit="return validacion()"
-                  class="border border-secondary p-5 rounded-3 mt-5">
-                <h1 class="text-center text-danger ">Modificación de datos</h1>
+                  class="border border-secondary p-8 rounded-3 mt-5">
+                <h1 class="text-center text-light">Modificación de datos</h1>
         
                 <div class="mb-3">
                   <label for="nombre" class="form-label text-light">Nombre:<span class="text-danger"> *</span> </label>
-                  <input onchange="resetear('nombre')"  type="text" class="form-control" id="nombre" name="nombre" placeholder="Walter" aria-describedby="nombreHelp">
+                  <input onchange="resetear('nombre')"  type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="Walter" aria-describedby="nombreHelp">
                   <div id="nombreHelp" class="form-text text-danger">Nombre obligatorio</div>
                 </div>
         
                 <div class="mb-3">
                   <label for="apellidos" class="form-label text-light">Apellidos:<span class="text-danger"> *</span></label>
-                  <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Black" aria-describedby="apellidosHelp">
+                  <input onchange="resetear('apellidos')" type="text" class="form-control" id="apellidos" name="apellidos" placeholder="" value="Black" aria-describedby="apellidosHelp">
                   <div id="apellidosHelp" class="form-text text-danger">Apellidos obligatorio</div>
                 </div>
         
                 <div class="mb-3">
                   <label for="email" class="form-label text-light">Email:<span class="text-danger"> *</span> </label>
-                  <input onclick="resetear('email')" type="text" class="form-control" id="email" name="email" placeholder="wblack@email.com" aria-describedby="emailHelp">
+                  <input onclick="resetear('email')" type="text" class="form-control" id="email" name="email" placeholder="" value="wblack@email.com" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text text-danger">Formato de correo erróneo</div>
                 </div>
         
@@ -47,16 +47,20 @@
                   <label for="provincia" class="form-label text-light">Provincia:<span class="text-danger"> *</span> </label>
                   <select onclick="resetear('provincia')" class="form-select" aria-label="Default select example"
                    id="provincia" name="provincia">
-                    <option value="0">Málaga</option>
                     <option value="29">Málaga</option>
                     <option value="18">Granada</option>
                     <option value="4">Almería</option>
+                    <option value="0">elige provincia--</option>
                   </select>
                   <div id="provinciaHelp" class="form-text text-danger">Seleccione provincia</div>
                 </div>
+
+                <div class="mb-3">
+                  <label for="nombre" class="form-label text-light">Elige su sexo:<span class="text-danger"> *</span> </label>
+                </div>
         
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
+                  <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino" checked>
                   <label class="form-check-label text-light" for="masculino">
                     Masculino
                   </label>
@@ -75,7 +79,7 @@
                     Otro
                   </label>
                 </div>
-                <div id="nombreHelp" class="form-text text-danger">Elija sexo</div>
+                <div id="sexoHelp" class="form-text text-danger">Elija sexo</div>
 
                 <div class="my-5 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -83,7 +87,7 @@
                     <a id="trigger" data-bs-toggle="modal" data-bs-target="#exampleModal"
                      class="text-primary fw-bold text-decoration-none">
                       Acepto los términos y condiciones</a></label>
-                      <div id="nombreHelp" class="form-text text-danger">Debe aceptar</div>
+                      <div id="exampleCheck1Help" class="form-text text-danger">Debe aceptar</div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
